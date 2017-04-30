@@ -3,8 +3,15 @@
 ## Swift
 ```swift
 ```
-#### Code Explanation
+#### Code Explanation:
+
+#### How are name spaces implemented?
+#### How are name spaces used?
+
 ## PHP
 ```php
 ```
-#### Code Explanation
+#### Code Explanation:
+
+#### How are name spaces implemented?
+#### How are name spaces used?

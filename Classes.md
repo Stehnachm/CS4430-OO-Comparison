@@ -3,8 +3,19 @@
 ## Swift
 ```swift
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### Defining
+### Creating new instances
+### Constructing/initializing
+### Destructing/de-initializing
+
 ## PHP
 ```php
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### Defining
+### Creating new instances
+### Constructing/initializing
+### Destructing/de-initializing

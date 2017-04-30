@@ -3,8 +3,13 @@
 ## Swift
 ```swift
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### How are values compared? (i.e. comparing two strings)
+
 ## PHP
 ```php
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### How are values compared? (i.e. comparing two strings)

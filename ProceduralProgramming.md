@@ -3,8 +3,13 @@
 ## Swift
 ```swift
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### Does the language support procedural programming?
+
 ## PHP
 ```php
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### Does the language support procedural programming?

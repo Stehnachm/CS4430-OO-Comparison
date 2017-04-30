@@ -3,8 +3,13 @@
 ## Swift
 ```swift
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### Does the language have any particularly unique features?
+
 ## PHP
 ```php
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### Does the language have any particularly unique features?

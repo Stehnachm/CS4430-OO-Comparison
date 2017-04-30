@@ -3,8 +3,15 @@
 ## Swift
 ```swift
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### What reflection abilities are supported?
+### How is reflection used?
+
 ## PHP
 ```php
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### What reflection abilities are supported?
+### How is reflection used?

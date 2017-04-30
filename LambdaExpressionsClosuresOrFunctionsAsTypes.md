@@ -3,8 +3,8 @@
 ## Swift
 ```swift
 ```
-#### Code Explanation
+#### Code Explanation:
 ## PHP
 ```php
 ```
-#### Code Explanation
+#### Code Explanation:

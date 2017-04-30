@@ -3,8 +3,15 @@
 ## Swift
 ```swift
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### Which does the language use? (null/nil/etc)
+### Does the language have features for handling null/nil references?
+
 ## PHP
 ```php
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### Which does the language use? (null/nil/etc)
+### Does the language have features for handling null/nil references?

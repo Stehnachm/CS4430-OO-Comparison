@@ -3,8 +3,17 @@
 ## Swift
 ```swift
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### Getters and setters...write your own or built in?
+### Backing variables?
+### Computed properties?
+
 ## PHP
 ```php
 ```
-#### Code Explanation
+#### Code Explanation:
+
+### Getters and setters...write your own or built in?
+### Backing variables?
+### Computed properties?
