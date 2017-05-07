@@ -6,6 +6,6 @@ Swift is not procedural. Swift is: protocol-oriented, object-oriented, functiona
 ## PHP
 ```php
 ```
-#### Code Explanation:
 
 ### Does the language support procedural programming?
+Althought OO concepts are present in the language, PHP does support procedural programming styles as well.

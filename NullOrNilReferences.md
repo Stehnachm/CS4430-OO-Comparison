@@ -23,9 +23,28 @@ In Swift we have something called "Optionals". Optionals are denoted by a ? and 
 
 Optionals also have the ability to be "unwrapped", which means that they can be passed around with a nil value inside of them or an appropriate value, but still satisfy the parameters of various functions.
 ## PHP
-```php
+### Which does the language use? (null/nil/etc)
+The word 'NULL' is used to signify a variable with no value in PHP. A value will be considered to be NULL if any of the following are true:
+- The variable has been assigned to the constant NULL
+- The variable has not yet been assigned a value
+- The variable has been unset using the unset() function
+
+### Does the language have features for handling null/nil references?
+The easiest way to do this in PHP is to either use the '===' comparison operator or to use the function is_null().
+
+This code example illustrates some of the usages of NULL:
+```
+<?php
+    $a = NULL;    
+    if (is_null($a)) echo "a is null, ";
+    
+    $b;    
+    if($b === NULL) echo "b is null, ";
+    
+    $c = 42;
+    unset($c);
+    if($c === NULL) echo "c is null";
+?>
 ```
 #### Code Explanation:
-
-### Which does the language use? (null/nil/etc)
-### Does the language have features for handling null/nil references?
+At the end of this segment of code, all three variables are NULL. The different ways to consider whether or not the variables are NULL are also shown. The output of the code would be "a is null, b is null, c is null".

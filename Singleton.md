@@ -26,10 +26,33 @@ Swift singleton creation is thread safe. This doesn't guarantee that the functio
 In our implementation, the singleton cannot use the lazy keyword for instantiation. The singleton can have variables that are lazily instantiated.
 
 ## PHP
+### How is a singleton implemented?
+A singleton can be implemented in PHP by creating a class that can only be instantiated once. This is done by having a static variable that keeps track of whether or not the class has been instantiated, and does not allow instantiation if it has. 
+### Can it be made thread-safe?
+Yes, it can be made thread by maintaining the status of the instance in a static variable on the class. Any subsequent calls to the creation method will return the already created instance.
+### Can the singleton instance be lazily instantiated?
+Yes, the singlton can be lazily instantiated by putting the instance creation inside of a static method of the class that can be accessed by the user.
 ```php
+<?php
+    class Singleton
+    {
+        // Hold an instance of the class
+        private static $instance;
+
+        // Creation method
+        public static function getSingleton()
+        {
+            if (!isset(self::$instance)) {
+                self::$instance = new __CLASS__;
+            }
+            return self::$instance;
+        }
+
+    }
+    $singleton1 = User::getSingleton();
+    $singleton2 = User::getSingleton();
+    
+?>
 ```
 #### Code Explanation:
-
-### How is a singleton implemented?
-### Can it be made thread-safe?
-### Can the singleton instance be lazily instantiated?
+Here, the class "Singleton" contains a static variable which holds the instance, and a static get method which returns the Singleton instance. If one does not already exist, it is created then returned. Both $singleton1 and $singleton2 will be referencing the same variable, as it was created with the first line, and referenced again with the second.
