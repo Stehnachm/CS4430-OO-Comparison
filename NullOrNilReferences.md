@@ -14,6 +14,7 @@ print(shawn ?? "bad")
 ```
 #### Code Explanation:
 Output: Shawn bad
+
 In this block of code, a variable named shawn of type String Optional(?) is declared. Shawn is then set to the string "shawn" and printed. Shawn is then set to nil and printed. Using the nil-coalescing the print statement will return the value of the string if it is not nil and will return "bad" if it is nil. In this case shawn is bad. 
 ### Which does the language use? (null/nil/etc)
 Swift uses nil. It is interesting to point out that Swift's nil is not the same as nil in Objective-C. In Objective-C, nil is a pointer to a non-existent object. In Swift, nil is not a pointer—it is the absence of a value of a certain type.

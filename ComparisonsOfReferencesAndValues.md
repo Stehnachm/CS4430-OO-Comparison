@@ -13,6 +13,7 @@ if a == b {
 ```
 #### Code Explanation:
 Output: "They are equal"
+
 This code declares two strings of the same value. An if else statement then uses the == operator to see if the strings are of the same value. In Swift, Strings are a value type. Since the value of both of the strings is the same, the if statement is true and exectues the print statement declaring they are equal.
 
 ### How are values compared? (i.e. comparing two strings)
