@@ -34,12 +34,32 @@ Swift uses ARC as opposed to garbage collection.
 See above. Swift Uses ARC.
 
 ## PHP
+
+### How is it handled?
+PHP stores every variable value in a struct called _zval_struct, meaning zend value. This struct contains information about the variable including value, type, type_info, and more. For for information on how each of the members of the zval are stored in memory, reference [this page](https://nikic.github.io/2015/05/05/Internal-value-representation-in-PHP-7-part-1.html) that explores how exactly PHP 7 stores values in memory. The most important pieces of the zval struct for memory management purposes are is_ref, which tells whether or not the variable is a part of a reference set, and refcount, which tells how many variable point to that zval container. A zval container is created when a new variable is created with a constant value.
+### How does it work?
+PHP automatically creates and allocates the required memory for the user, as well as setting all of the zval information. The user can use some memory management APIs to directly manipulate memory if they desire to do so.
+### Garbage collection?
+PHP performs garbage collection at three primary junctures: when you tell it to, when you leave a function, and when a script ends. Situation 1 will occur if you use unset() or other resource-destroying functions that explicitly clear up after your variables. The second situation will occur if any variable leaves scope, or is no longer needed. The last situation will occur when a script has finished execution, and it will clean all script related activities for the user.
+### Automatic reference counting?
+Reference counting is done automatically by PHP as a part of the zend value. The code below demonstrates exactly how it works.
 ```php
+<?php
+    $a = "new string";          //new zval container created
+    $c = $b = $a;               //refcount increased to 3
+    xdebug_debug_zval( 'a' );
+    $b = 42;                    //new zval container created, one refcount removed from other container
+    xdebug_debug_zval( 'a' );
+    unset( $c );                //variable c destroyed, refcount reduced
+    xdebug_debug_zval( 'a' );
+?>
 
 ```
 #### Code Explanation:
-
-### How is it handled?
-### How does it work?
-### Garbage collection?
-### Automatic reference counting?
+This code will have the following output:
+```
+a: (refcount=3, is_ref=0)='new string'
+a: (refcount=2, is_ref=0)='new string'
+a: (refcount=1, is_ref=0)='new string'
+```
+Here it is shown how the refcount can increase and decrease based upon the number of variables that reference a specific constant value. It is also shown that the unset() function can be used to destroy a variable. 
