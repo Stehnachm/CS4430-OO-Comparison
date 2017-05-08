@@ -2,11 +2,21 @@
 
 ## Swift
 ```swift
+class ExampleClass{
+    var exampleVariable:Int?
+    
+    init(number:Int){
+        print("Hello World")
+        self.exampleVariable = number
+    }
+}
+
 ```
 #### Code Explanation:
+In the class, the initializer takes in an Int and using self will set that to the variable on the class named exampleVariable. 
 
 ### this? self?
-
+Swift uses self to reference current scope.
 ## PHP
 ```php
 class Post {

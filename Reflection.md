@@ -2,12 +2,39 @@
 
 ## Swift
 ```swift
+class Project {
+    var title: String = ""
+    var id: Int = 0
+    var platform: String = ""
+    var version: Int = 0
+    var info: String?
+}
+
+let sampleProject = Project()
+sampleProject.title = "MirrorMirror"
+sampleProject.id = 199
+sampleProject.platform = "iOS"
+sampleProject.version = 2
+sampleProject.info = "test app for Reflection"
+
+let projectMirror = Mirror(reflecting: sampleProject)
+let properties = projectMirror.children
+
+print(properties.count)        //5
+print(properties.first?.label) //Optional("title")
+print(properties.first!.value) //MirrorMirror
+print()
+
+for property in properties {
+    print("\(property.label!):\(property.value)")
+}
 ```
 #### Code Explanation:
-
+A class named Project is defined and then filled with data. Then a Mirror type is declared and the class is passed into it. You can then access the properties (labels and values) from the mirror. 
 ### What reflection abilities are supported?
+Reflection was originally supported in Objective-C but when swift was created reflection was deemed unsafe and therefore not longer being developed for. Reflection is still available in the Objective-C runtime. Note: private variables can be accessed through reflection.
 ### How is reflection used?
-
+Swifts limited reflection ability can be used to find title and values on Objective-C classes. If a swift class or type is used, reflection will fail.
 ## PHP
 ```php
 class HelloWorld {

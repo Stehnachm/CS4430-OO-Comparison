@@ -2,13 +2,36 @@
 
 ## Swift
 ```swift
+let string:String = "string"
+let int:Int = 1
+let bool:Bool = true
+
+let class1 = Class1()
+
+// Value type example
+struct S { var data: Int = -1 }
+var a = S()
+var b = a						// a is copied to b
+a.data = 42						// Changes a, not b
+print("\(a.data), \(b.data)")	// prints "42, -1"
+
+// Reference type example
+class C { var data: Int = -1 }
+var x = C()
+var y = x						// x is copied to y
+x.data = 42						// changes the instance referred to by x (and y)
+print("\(x.data), \(y.data)")	// prints "42, 42"
 ```
 #### Code Explanation:
+At the top basic types are being created such as String, Int and Bool. Below is a class instantiation, the word "new" is not needed in Swift, instantiation is instead achieved by using parenthesis behind the class name. Last are examples of a reference type and a value type and how data is handled with each of them when reassigning variables. 
 
 ### What types does the language support?
-### Are both reference and value types supported?
-### Can new value types be created?
+Swift supports standard types such as string, cool, double, int, float, character. It also includes an optional type and specific types that are prefixed with “NS”, these are back from the days or Steve Jobs Next Step company that was folded into apple. In Swift 3 more of the types had the “NS” removed in the great renaming.
 
+### Are both reference and value types supported?
+Yes, both reference and value types are supported.
+### Can new value types be created?
+Yes, Swift does support the creation of value types.
 ## PHP
 ```php
 $string = "Hello world";

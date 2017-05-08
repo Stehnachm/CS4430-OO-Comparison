@@ -2,12 +2,48 @@
 
 ## Swift
 ```swift
+protocol SomeProtocol {
+    var mustBeSettable: Int { get set }
+    var doesNotNeedToBeSettable: Int { get }
+    static func someTypeMethod()
+}
+
+class exampleClass: SomeProtocol{
+    var mustBeSettable: Int {
+        
+        get{
+           return 5
+        }
+        
+        set{
+        
+        }
+    }
+    var doesNotNeedToBeSettable: Int {
+        get{
+            return 5
+        }
+    }
+    
+    init(number:Int){
+        self.mustBeSettable = number
+    }
+    
+    static func someTypeMethod() {
+        //Function code here
+    }
+}
 ```
 #### Code Explanation:
 
+Int the code about there are two variables declared, on that must be set and one that is optionally set. Below that there is a method declaration that must be implemented in the class. The protocol is on "ExampleClass" and properly confirms to the protocol.
+
 ### What does the language support?
+Swift supports protocols, declared similarly to classes but instead using the “protocol” keyword.
 ### What abilities does it have?
+Protocols act as blueprints for various different attributes including methods and properties.
 ### How is it used?
+A protocol is adopted or used by a class, struct, or enum to provide an implementation of requirements. Any type that satisfies the requirements of the protocol is said to conform to the protocol.
 
 ## PHP
 ```php

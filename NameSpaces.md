@@ -2,11 +2,21 @@
 
 ## Swift
 ```swift
+
+import LibraryA
+
+//in LibraryA a function called "example" exists that takes number and doubles it
+var two = example(1)
+
+//This is the same as doing...
+var four = LibraryA.example(2)
 ```
 #### Code Explanation:
-
+In this code block, LibraryA is being imported. With this all of its methods are being imported into the class. Because of this in the code, methods can be directly called without prefixing the library name. In the example, the method "example" is being called in two different ways, with and without the library name prefix. Both ways will call the function correctly.
 #### How are name spaces implemented?
+Namespacing in Swift is implicit , so classes are scoped by the modules that they are in, this way you don't need prefixing.
 #### How are name spaces used?
+After importing a class you will have access to all its methods, for example you import ClassA with a method called doSomething(), you can simply call doSomething() and swift will think you are calling ClassA.doSomething().
 
 ## PHP
 ```php
